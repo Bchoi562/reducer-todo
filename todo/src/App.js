@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import TodoForm from './components/ToDoForm';
-import reducer, {initialState} from './reducers/reducer';
+import {reducer, initialState} from './reducers/reducer';
 import React, {useReducer} from 'react';
 import {setItem, setCompleted} from './actions/actions';
 import TodoList from './components/TodoList';
@@ -9,6 +9,8 @@ import TodoList from './components/TodoList';
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
+  
+
 
   return (
     <div className="App">
