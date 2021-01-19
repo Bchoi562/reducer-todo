@@ -9,7 +9,7 @@ export default function TodoList(props){
         <div>
             <div>
                 {props.formData.map((item)=>(
-                    <Todo key={item.id} item={item}/>
+                    <Todo dispatch={props.dispatch} key={item.id} item={item}/>
                 ))}
                 <button onClick={props.handleClear} className="clear-btn">Click to Clear</button>
             </div>

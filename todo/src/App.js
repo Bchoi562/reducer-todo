@@ -18,7 +18,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1>To Do List</h1>
       <TodoForm addToDo={setItem} dispatch={dispatch}/>
-      <TodoList formData={state}/>
+      <TodoList formData={state} dispatch={dispatch}/>
       </header>
     </div>
   );

@@ -1,10 +1,10 @@
 import React, { useReducer, useState } from 'react';
 
-import  {reducer, initialState} from '../reducers/reducer';
+// import  {reducer, initialState} from '../reducers/reducer';
 import {setItem, setCompleted, removeItem} from '../actions/actions';
 
 const ToDoForm = (props) => {
-    const [state, dispatch] = useReducer(reducer, initialState);
+    // const [state, dispatch] = useReducer(reducer, initialState);
     const [formData, setFormData]=useState('');
     
     const handleChanges = (e) => {
@@ -25,12 +25,13 @@ const ToDoForm = (props) => {
         setFormData("");
     }
 
-    const handleClear = () => {
-        dispatch(removeItem());
+    const handleClear = (e) => {
+        e.preventDefault();
+        props.dispatch(removeItem());
     }
 
     
-
+ 
  
     return(
         <div>

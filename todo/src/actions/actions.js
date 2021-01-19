@@ -12,5 +12,6 @@ export const setCompleted = (id) => {
 
 export const removeItem = () => {
     return({type:REMOVE_ITEM});
+    
 }
 
